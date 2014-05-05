@@ -27,7 +27,8 @@ def main():
       host = config.get(db, 'host')
       database = config.get(db, 'host')
       user = config.get(db, 'user')
-      os.mkdir(host)
+      if !os.path.exists(host)
+        os.mkdir(host)
       dump_file = open(database + '_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'), "w")
       subprocess.Popen(['echo', 'MamaIkilledher'+user], stdout=dump_file)
       dump_file.close();
