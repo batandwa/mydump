@@ -10,6 +10,7 @@ import sys
 import subprocess
 import getpass
 import ConfigParser
+import os
 import datetime
 # from subprocess import Popen, PIPE, STDOUT
 
