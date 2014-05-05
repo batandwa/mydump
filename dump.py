@@ -21,7 +21,7 @@ def main():
   config.read('dump.cfg')
 
   for db in config.sections():
-    print db.active
+    print config.getboolean(db, 'active')
 
   sys.exit(0)
 
