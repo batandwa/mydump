@@ -30,10 +30,10 @@ def main():
       if not os.path.exists(host):
         os.mkdir(host)
       dump_file = open(host + '/' + database + '_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S') + '.sql.gz', "w")
-      subprocess.Popen(['echo', 'MamaIkilledher'+user], stdout=dump_file)
-      dump_file.close();
-      # subprocess.call(['ssh', host, 'mysqldump -u\'$MYSQLDUMP_USER\' -p \'$MYSQLDUMP_DB\' | gzip -3 -c'])
+      subprocess.Popen(['ssh', host, 'mysqldump -u\'$MYSQLDUMP_USER\' -p \'$MYSQLDUMP_DB\' | gzip -3 -c'])
+      # subprocess.Popen(['echo', 'MamaIkilledher'+user], stdout=dump_file)
       # mkdir -p "$MYSQLDUMP_HOST" && ssh $MYSQLDUMP_HOST "mysqldump -u'$MYSQLDUMP_USER' -p '$MYSQLDUMP_DB' | gzip -3 -c" > "$MYSQLDUMP_HOST/${MYSQLDUMP_DB}_`date +%Y%m%d_%H%M%S`.sql.gz"
+      dump_file.close();
 
   sys.exit(0)
 
