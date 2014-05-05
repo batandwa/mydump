@@ -54,7 +54,7 @@ def main():
   # p = Popen(['grep', 'f'], stdout=PIPE, stdin=PIPE, stderr=STDOUT)
   # subprocess.call(['ls', '-l'], stdout=dumpfile)
   passs = getpass.getpass("Key password: ")
-  p = subprocess.Popen(["ssh", host, "mysqldump -uroot -p "+database+" | gzip -3 -c"], stdin=subprocess.PIPE, stdout=dumpfile)
+  p = subprocess.Popen(["ssh", host, "mysqldump -uroot -p "+database+" | gzip -3 -c"], stdin=subprocess.PIPE, stdout=dumpfile, preexec_fn=os.setsid)
   # p.communicate(input=passs+'\ntwo\nthree\nfour\nfive\nsix\n')[0]
   # p.communicate(input=passs)[0]
   print passs
