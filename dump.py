@@ -20,6 +20,10 @@ def main():
   config = ConfigParser.ConfigParser()
   config.read('dump.cfg')
   print config.sections()
+
+  for db in config.sections():
+    print db
+
   sys.exit(0)
 
   host = sys.argv[1]
