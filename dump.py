@@ -11,6 +11,7 @@ import subprocess
 import getpass
 import ConfigParser
 import os
+import pexpect
 import datetime
 # from subprocess import Popen, PIPE, STDOUT
 
