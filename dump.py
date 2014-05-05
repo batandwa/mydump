@@ -18,7 +18,7 @@ def main():
   # print 'Number of arguments: ', len(sys.argv)
   config = ConfigParser.ConfigParser()
   config.read('dump.cfg')
-  config.sections()
+  print config.sections()
   sys.exit(0)
 
   host = sys.argv[1]
