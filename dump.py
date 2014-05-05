@@ -28,6 +28,7 @@ def main():
       database = config.get(db, 'host')
       user = config.get(db, 'user')
       if os.path.exists(host):
+        
       else:
         os.mkdir(host)
       dump_file = open(database + '_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'), "w")
