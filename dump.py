@@ -19,10 +19,9 @@ def main():
   # print 'Number of arguments: ', len(sys.argv)
   config = ConfigParser.ConfigParser()
   config.read('dump.cfg')
-  print config.sections()
 
   for db in config.sections():
-    print db
+    print db.active
 
   sys.exit(0)
 
