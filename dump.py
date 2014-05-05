@@ -16,10 +16,10 @@ import datetime
 def main():
 
   # print 'Number of arguments: ', len(sys.argv)
-  
-  if len(sys.argv)<3:
-    print "\tUsage: ", sys.argv[0], " <host> <database>"
-    sys.exit(1)
+  config = ConfigParser.ConfigParser()
+  config.read('dump.cfg')
+  config.sections()
+  sys.exit(0)
 
   host = sys.argv[1]
   database = sys.argv[2]
