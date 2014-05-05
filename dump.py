@@ -29,7 +29,7 @@ def main():
       user = config.get(db, 'user')
       if not os.path.exists(host):
         os.mkdir(host)
-      dump_file = open(database + '_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'), "w")
+      dump_file = open(host + '/' + database + '_' + datetime.datetime.now().strftime('%Y%m%d_%H%M%S'), "w")
       subprocess.Popen(['echo', 'MamaIkilledher'+user], stdout=dump_file)
       dump_file.close();
       # subprocess.call(['ssh', host, 'mysqldump -u\'$MYSQLDUMP_USER\' -p \'$MYSQLDUMP_DB\' | gzip -3 -c'])
