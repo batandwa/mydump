@@ -21,7 +21,10 @@ def main():
   config.read('dump.cfg')
 
   for db in config.sections():
-    print config.getboolean(db, 'active')
+    if config.getboolean(db, 'active'):
+      print config.get(db)
+      # os.mkdir()
+      # mkdir -p "$MYSQLDUMP_HOST" && ssh $MYSQLDUMP_HOST "mysqldump -u'$MYSQLDUMP_USER' -p '$MYSQLDUMP_DB' | gzip -3 -c" > "$MYSQLDUMP_HOST/${MYSQLDUMP_DB}_`date +%Y%m%d_%H%M%S`.sql.gz"
 
   sys.exit(0)
 
